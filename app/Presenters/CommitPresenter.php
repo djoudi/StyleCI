@@ -109,7 +109,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
 
         // Match file names with files.
         foreach ($extractedFiles as $index => $file) {
-            $files[$fileNames[$index]] = preg_replace('/^.+\n.+\n/', '', $file);
+            $files[$fileNames[$index]] = '@'.(preg_split('/\@/', $file, 2)[1]);
         }
 
         return $files;
