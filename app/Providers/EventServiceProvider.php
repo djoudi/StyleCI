@@ -38,9 +38,11 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\RepoWasDisabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\DisableHooksHandler',
+            'StyleCI\StyleCI\Handlers\Events\RealTimeRepoHandler',
         ],
         'StyleCI\StyleCI\Events\RepoWasEnabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\EnableHooksHandler',
+            'StyleCI\StyleCI\Handlers\Events\RealTimeRepoHandler',
         ],
         'StyleCI\StyleCI\Events\UserHasLoggedInEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AuthenticationHandler',
